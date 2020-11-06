@@ -3,25 +3,26 @@ import './App.css';
 import { useEffect, useState } from "react";
 import Axios from "axios";
 
-function App() {
-  const [personajes, setPersonajes] = useState({});
+function ListStarWars() {
+  const [characters, setCharacter] = useState([]);
+
   useEffect(() => {
     Axios.get("https://swapi.dev/api/people/")
       .then((response) => {
-        console.log(response);
-        setPersonajes(response.data.results);
-      })
-      .then((error) => {
+        setCharacter(response.data.results);
+      }).catch(error => {
         console.log(error);
       });
   }, []);
+
   return (
     <div>
-      {personajes.map((personaje) => {
-        return personaje.name;
-      })}
+      <h1>Characters Star Wars</h1>
+      {
+        characters.map((character, index) => (<li key={index}>{character.name}</li>))
+      }
     </div>
   );
 }
 
-export default App;
+export default ListStarWars;
