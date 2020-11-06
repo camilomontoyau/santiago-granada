@@ -18,9 +18,11 @@ function ListStarWars() {
   return (
     <div>
       <h1>Characters Star Wars</h1>
-      {
-        characters.map((character, index) => (<li key={index}>{character.name}</li>))
-      }
+      {/* componente reusable por cada personaje nombre, altura, masa, color cabello, nombre del planeta */}
+      {/* API en express, que permita hacer CRUD de cada persona */}
+      {characters.map((character, index) => (
+        <li key={index}>{character.name}</li>
+      ))}
     </div>
   );
 }
