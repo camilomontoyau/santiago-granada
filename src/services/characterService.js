@@ -37,7 +37,6 @@ const createCharacter = async (character) => {
 
 
 export {
-    getCharacter,
     getAllCharacters,
     updateCharacter,
     deleteCharacter,
