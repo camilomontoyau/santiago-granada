@@ -1,4 +1,3 @@
-const { responsiveFontSizes } = require('@material-ui/core');
 const Sequelize = require('sequelize');
 const character = require('../models').character;
 const CharacterService = require('../services/characterServices');
