@@ -1,35 +1,28 @@
 import './App.css';
 import Crud from './components/crudComponent';
 import { useEffect, useState } from "react";
-import { getAllCharacters, deleteCharacter, updateCharacter, createCharacter } from './services/characterService';
+import { getAllCharacters } from './services/characterService';
 
-/**
- * Main aplication
- */
-const ListStarWars = () => {
-  const [currentData, setCurrentData] = useState([{ "status": "NO DATA" }]);
-  
-  const updateData = async () => {
+function ListStarWars() {
+  const [currentData, setCurrentData] = useState([{"status": "NO DATA"}]);
+
+  const getData = async () =>{
     let x = await getAllCharacters();
     x = x.data;
+    console.log(x);
     setCurrentData(x);
   }
 
-
   useEffect(() => {
-    updateData();
+    getData();
   }, []);
 
   return (
     <div>
-      <Crud
-        data={currentData}
-        updateData={updateData}
-        handleDelete={deleteCharacter}
-        handleUpdate={updateCharacter}
-        handleCreate={createCharacter}
-        title={'Welcome to the star wars characters'}
-      />
+
+      <Crud data={currentData} />
+
+
     </div>
   );
 }
