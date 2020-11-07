@@ -1,5 +1,5 @@
 import './App.css';
-import Crud from './components/crudComponent';
+import Crud from './components/crud';
 import { useEffect, useState } from "react";
 import { getAllCharacters, deleteCharacter, updateCharacter, createCharacter } from './services/characterService';
 
