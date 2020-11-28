@@ -7,10 +7,10 @@ import { getAllCharacters, deleteCharacter, updateCharacter, createCharacter } f
 /**
  * Main aplication
  */
-const ListStarWars = () => {
+const App = () => {
   const [currentData, setCurrentData] = useState([{ "status": "NO DATA" }]);
   
-  const updateData = async () => {
+   const updateData = async () => {
     let x = await getAllCharacters();
     x = x.data;
     setCurrentData(x);
@@ -36,4 +36,4 @@ const ListStarWars = () => {
   );
 }
 
-export default ListStarWars;
+export default App;
