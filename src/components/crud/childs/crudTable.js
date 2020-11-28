@@ -8,8 +8,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
-import CrudActionButton from './crudButtonAction';
-import CrudDialog from './crudDialog';
+import CrudActionButton from './CrudButtonAction';
+import CrudDialog from './CrudDialog';
 
 /**
  * Provide the main table for showing the data

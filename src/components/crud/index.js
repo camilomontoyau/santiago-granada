@@ -1,1 +1,1 @@
-export {default} from './crud.js'
+export {default} from './Crud.js'

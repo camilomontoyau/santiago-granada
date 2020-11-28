@@ -1,5 +1,6 @@
 import './App.css';
 import Crud from './components/crud';
+import GridVsFlex from './components/gridVsFlex';
 import { useEffect, useState } from "react";
 import { getAllCharacters, deleteCharacter, updateCharacter, createCharacter } from './services/characterService';
 
@@ -30,6 +31,7 @@ const ListStarWars = () => {
         handleCreate={createCharacter}
         title={'Welcome to the star wars characters'}
       />
+      <GridVsFlex/>
     </div>
   );
 }

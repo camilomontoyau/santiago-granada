@@ -1,6 +1,6 @@
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import CrudTable from './childs/crudTable';
+import CrudTable from './childs/CrudTable';
 
 /**
  * Reusable crud component
